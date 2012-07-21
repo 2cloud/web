@@ -18,7 +18,9 @@
 .navbar-inner {
   padding-left:  20px;
   padding-right: 20px;
-  #gradient > .vertical(@navbarBackgroundHighlight, @navbarBackground);
+  //#gradient > .vertical(@navbarBackgroundHighlight, @navbarBackground);
+  background-image: url("../img/dark_leather.png");
+  background-repeat: repeat;
   .border-radius(4px);
   @shadow: 0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1);
   .box-shadow(@shadow);
@@ -226,9 +228,16 @@
 }
 // Hover
 .navbar .nav > li > a:hover {
-  background-color: @navbarLinkBackgroundHover; // "transparent" is default to differentiate :hover from .active
+  //background-color: @navbarLinkBackgroundHover; // "transparent" is default to differentiate :hover from .active
+  background-image: url("../img/dark_leather.png");
+  background-repeat: repeat;
   color: @navbarLinkColorHover;
   text-decoration: none;
+  text-shadow: 0px 0px 4px @navbarLinkColorHover;  
+}
+
+.navbar .nav > li > a > i {
+  text-shadow: none;
 }
 
 // Active nav items
@@ -236,7 +245,9 @@
 .navbar .nav .active > a:hover {
   color: @navbarLinkColorActive;
   text-decoration: none;
-  background-color: @navbarLinkBackgroundActive;
+  background-image: url("../img/dark_leather.png");
+  background-repeat: repeat; 
+//  background-color: @navbarLinkBackgroundActive;
 }
 
 // Dividers (basically a vertical hr)
@@ -338,4 +349,12 @@
     left: auto;
     right: 13px;
   }
+}
+
+.navbar.connected {
+  border-bottom: 3px solid #46A546;
+}
+
+.navbar.error {
+  border-bottom: 3px solid #ff2200;
 }

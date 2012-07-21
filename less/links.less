@@ -25,7 +25,7 @@ body {
 }
 
 #send-link-device {
-  margin-right: (((@fluidGridColumnWidth * @gridColumns) + (@fluidGridGutterWidth * (@gridColumns - 1))) / 48) - 1.2;
+  margin-right: (((@fluidGridColumnWidth * @gridColumns) + (@fluidGridGutterWidth * (@gridColumns - 1))) / 36) - 1.2;
   margin-left: (((@fluidGridColumnWidth * @gridColumns) + (@fluidGridGutterWidth * (@gridColumns - 1))) / 48) - 1.2;
 }
 
@@ -34,7 +34,7 @@ body {
 }
 
 #send-link-container {
-  padding: 5px 10px 0px 10px;
+  padding: 10px 10px 0px 10px;
 }
 
 #send-link-inputs {
@@ -46,8 +46,9 @@ body {
 }
 
 .send-link-toggle i {
-  vertical-align: middle;
-  margin: 5px;
+  vertical-align: top;
+  margin: 0px;
+  line-height: @baseLineHeight;
   .close
 }
 
@@ -57,18 +58,23 @@ body {
 
 #send-link-label {
   margin: 0;
+  border: 0;
+  line-height: @baseLineHeight;
+  padding-bottom: 15px;
 }
 
 .links th {
-  font-size: @baseFontSize * 1.1;
-  background-color: @white;
-  font-weight: normal;
+  font-size: 11px;
+  #gradient > .vertical(#f5f5f5, #eee);
+  font-weight: bold;
+  color: #999999;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
 }
 
 
 .intro {
-  margin: 20px;
-  margin-top: 0px;
+  margin-bottom: 20px;
 }
 
 .intro p {
@@ -77,6 +83,7 @@ body {
 
 td.comment {
   padding: 4px;
+  padding-left: 8px;
   font-size: @baseFontSize * .9;
   line-height: @baseLineHeight * .9;
   background-color: #EDF0F3;
